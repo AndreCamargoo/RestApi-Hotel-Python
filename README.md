@@ -32,4 +32,4 @@ See also
 
 ## Development
 
-Read the [CONTRIBUTING.md](CONTRIBUTING.md) file.
+André Camargo.
