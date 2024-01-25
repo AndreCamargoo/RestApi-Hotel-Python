@@ -1,0 +1,382 @@
+{
+	"info": {
+		"_postman_id": "c2cc2b5c-d969-4eee-9e7f-33ac08261d4d",
+		"name": "Rest Api Python",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16267411"
+	},
+	"item": [
+		{
+			"name": "Hoteis",
+			"item": [
+				{
+					"name": "/hoteis",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/hoteis?cidade=São Paulo&estrelas_min=1&estrelas_max=4&diaria_min=99.80&diaria_max=500",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"hoteis"
+							],
+							"query": [
+								{
+									"key": "cidade",
+									"value": "São Paulo"
+								},
+								{
+									"key": "estrelas_min",
+									"value": "1"
+								},
+								{
+									"key": "estrelas_max",
+									"value": "4"
+								},
+								{
+									"key": "diaria_min",
+									"value": "99.80"
+								},
+								{
+									"key": "diaria_max",
+									"value": "500"
+								},
+								{
+									"key": "limit",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "offset",
+									"value": "0",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/hoteis/{hotel_id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/hoteis/bravo",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"hoteis",
+								"bravo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/hoteis/{hotel_id}",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNjIwMDI5NSwianRpIjoiZDBiNjdjZDUtZTI1ZC00ODhhLTk2NzEtNWUyMTVlMzI4Zjg1IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzA2MjAwMjk1LCJjc3JmIjoiNmRlZDJkNTctMWQ5YS00ZTgyLWI0NmMtZDRhYWI1ZTE0MTIyIiwiZXhwIjoxNzA2MjAxMTk1fQ.7NzCyfsYY3GbrDQV4JE8eAdBF-tdzojQXChjF3i07Rg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Foxtrot Hotel\",\r\n    \"estrelas\": 5.0,\r\n    \"diaria\": 800.00,\r\n    \"cidade\": \"Santa Catarian\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/hoteis/foxtrot",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"hoteis",
+								"foxtrot"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/hoteis/{hotel_id}",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNjExODI2NSwianRpIjoiYzUxNjU3YzgtN2I4NC00NzBiLWI4MGYtNDAwNmE4NzAxNjFmIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzA2MTE4MjY1LCJjc3JmIjoiYWNlM2E5YmMtYzk2My00MWZkLTlhYTgtYzk2YmMzMWIzZGI3IiwiZXhwIjoxNzA2MTE5MTY1fQ.x9et37t-v7S9TN7IFPwCYE2kJ_Rh1BUnTbQyJvVK65c",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Echo Hotell\",\r\n    \"estrelas\": 4.1,\r\n    \"diaria\": 380.90,\r\n    \"cidade\": \"Birigui\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/hoteis/echo",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"hoteis",
+								"echo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/hoteis/{hotel_id}",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNjExNzEzNiwianRpIjoiNzY2ZGRiNmYtNjY2MC00NzVjLWFmODAtYjJlN2ZiOTUyNGRiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzA2MTE3MTM2LCJjc3JmIjoiMjA5ZjdiNWItODdlMi00OWI4LWE5OGYtMDM4OWMzYzQ2MmY1IiwiZXhwIjoxNzA2MTE4MDM2fQ.-VPVZnYhoATy-TUALtHlm-uf_dlAQJOCAZ0b0Wf0uWI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:5000/hoteis/delta",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"hoteis",
+								"delta"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "/cadastro",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"login\": \"admin\",\r\n    \"senha\": \"abcd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/cadastro",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"cadastro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/usuarios/{usuario_id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/usuarios/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"usuarios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/usuarios/{usuario_id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/usuarios/andre",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"usuarios",
+								"andre"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "/login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"login\": \"andre\",\r\n    \"senha\": \"abcd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/logout",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
